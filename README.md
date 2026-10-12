@@ -36,7 +36,13 @@ Set `VITE_FORM_ENDPOINT` to a form service such as Formspree or Basin, and reque
 
 ## Deploy
 
-On Cloudflare Pages, use build command `npm run build` and output folder `dist`. `public/_redirects` sends `/about` to the app. Add the `VITE_*` variables under the project's environment variables.
+### GitHub Pages
+
+The included GitHub Actions workflow deploys the site to GitHub Pages whenever changes are pushed to `main`. In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**. After the first successful workflow run, the site will be available at `https://madscalls.github.io/foodTruckTemplate/`. Add any `VITE_*` variables as repository Actions variables before deploying if needed.
+
+### Cloudflare Pages
+
+Use build command `npm run build` and output folder `dist`. `public/_redirects` sends `/about` to the app. Add the `VITE_*` variables under the project's environment variables.
 
 ## Before launch
 

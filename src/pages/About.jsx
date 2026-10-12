@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { SITE, CREW } from '../site.js';
+import { SITE, CREW, assetUrl } from '../site.js';
 
 export default function About() {
   useEffect(() => {
@@ -21,7 +21,7 @@ export default function About() {
       <section className="section">
         <div className="wrap story">
           <div className="story-photo">
-            <img src="/images/truck-window.jpg" alt="Inside the truck window, string lights and taps behind the counter" />
+            <img src={assetUrl('images/truck-window.jpg')} alt="Inside the truck window, string lights and taps behind the counter" />
             <span className="badge">Rolling since [year]</span>
           </div>
           <div className="stack-22">

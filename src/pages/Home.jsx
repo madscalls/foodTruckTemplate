@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Schedule from '../components/Schedule.jsx';
 import CateringForm from '../components/CateringForm.jsx';
 import Check from '../components/Check.jsx';
-import { SITE, MENU } from '../site.js';
+import { SITE, MENU, assetUrl } from '../site.js';
 import { loadStops, dayKey, timeRange } from '../calendar.js';
 
 const TICKER = 'Smash burgers ✸ Fresh-cut fries ✸ Made to order ✸ ';
@@ -57,7 +57,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-photo">
-          <img src="/images/truck-yellow.jpg" alt="The truck parked outside a diner, serving window open" />
+          <img src={assetUrl('images/truck-yellow.jpg')} alt="The truck parked outside a diner, serving window open" />
           <Link className="sticker" to="/#find-us">
             <span className="eyebrow">Today</span>
             <span>{today}</span>
@@ -79,8 +79,8 @@ export default function Home() {
             <p className="sec-lede">Fresh beef smashed on the flat-top, potatoes cut every morning. Ask at the window about today's special.</p>
           </div>
           <div className="menu-grid">
-            <MenuCard title="Burgers" tone="red" img="/images/burger-box.jpg" alt="A cheeseburger in a paper tray with fries" imgPos="50% 35%" items={MENU.burgers} />
-            <MenuCard title="Fries & extras" tone="amber" img="/images/fries.jpg" alt="Seasoned fries on a speckled plate" items={MENU.fries} />
+            <MenuCard title="Burgers" tone="red" img={assetUrl('images/burger-box.jpg')} alt="A cheeseburger in a paper tray with fries" imgPos="50% 35%" items={MENU.burgers} />
+            <MenuCard title="Fries & extras" tone="amber" img={assetUrl('images/fries.jpg')} alt="Seasoned fries on a speckled plate" items={MENU.fries} />
           </div>
           <div className="combo">
             <span className="combo-main">{MENU.combo}</span>
@@ -103,8 +103,8 @@ export default function Home() {
       </section>
 
       <section className="photo-band" aria-label="Photos">
-        <img src="/images/burgers-stack.jpg" alt="Stacked burgers and fries packed in paper trays" loading="lazy" />
-        <img src="/images/truck-window.jpg" alt="Inside the truck window under string lights" loading="lazy" style={{ objectPosition: '50% 30%' }} />
+        <img src={assetUrl('images/burgers-stack.jpg')} alt="Stacked burgers and fries packed in paper trays" loading="lazy" />
+        <img src={assetUrl('images/truck-window.jpg')} alt="Inside the truck window under string lights" loading="lazy" style={{ objectPosition: '50% 30%' }} />
       </section>
 
       <section id="catering" className="section section-amber">

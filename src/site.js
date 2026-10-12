@@ -1,6 +1,8 @@
 // Everything a new client changes lives here: name, contact, menu, sample schedule.
 // Colors live at the top of styles.css.
 
+export const assetUrl = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+
 export const SITE = {
   name: 'Flip Side',
   fullName: 'Flip Side Burgers',
